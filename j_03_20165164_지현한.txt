@@ -1,0 +1,75 @@
+//16. 마일을 킬로미터로 변환하는 프로그램을 작성하라.
+ //1마일은 1.609킬로미터와 같다. 사용자로부터 마일의 값을 읽어 들인다.
+ /*
+ 마일을 입력하시오: 10
+ 10마일은 16.09킬로미터입니다.
+ */
+import java.util.Scanner;
+
+public class Mile {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("마일을 입력하세요");
+		double num = scan.nextDouble();
+		final double a = 1.609;
+		double kmeter = num*a;
+		System.out.println(num + "마일은" + kmeter + "킬로미터 입니다");
+}
+}
+
+
+
+//17. 상점에 가면 우리는 상품에 대한 돈을 내고 영수증을 받는다.
+ //영수증에서는 10% 부가세와 잔돈 등이 인쇄되어 있다.
+ //구입한 상품의 가격과 손님한테 받은 금액을 입력하면 부가세와 잔돈을 출력하는 프로그램을 작성하여 보자.
+ /*
+ 받은 돈: 10000
+ 상품의 총액: 7500
+ 부가세: 750
+ 잔돈: 2500
+ */
+import java.util.Scanner;
+
+public class Store {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("받은 금액을 입력하세요");
+		double money = scan.nextDouble();
+
+		System.out.print("상품의 가격을 입력하세요");
+		double num = scan.nextDouble();
+		
+
+		double change = money - num;
+		double tprma = num*0.1;
+		System.out.println(num + "부가세는" + tprma + "잔돈은" + change + "입니다");
+}
+}
+
+
+
+
+//hw: 학과 학년을 입력 받아 출력하는 프로그램을 작성하시오.
+ /*
+ 학과: computer
+ 학년: 2
+ 당신은 computer학과 2학년 입니다.
+ */
+import java.util.Scanner;
+
+public class Hw {
+	public static void main(String args[]) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("학과를 입력하세요");
+		String gkrrhk = scan.nextLine();
+
+		System.out.print("학년을 입력하세요");
+		int num = scan.nextInt();
+		
+
+		System.out.println("당신은" + gkrrhk + "학과" + num + "학년 입니다.");
+}
+}

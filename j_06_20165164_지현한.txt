@@ -1,0 +1,117 @@
+
+
+public class Test09 {
+
+	public static void main(String[] args) {
+
+		int a = 1, sum = 0;
+		while (a <= 100) {
+			if (a % 3 != 0 && a % 4 != 0) {
+				sum = sum + a;
+			}
+			++a;
+		}
+		System.out.println(sum);
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class Test25 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		char ch;
+
+		do {
+			System.out.print("문자 입력 : ");
+			ch = scan.next().charAt(0);
+			System.out.println("문자 출력 : " + ch);
+			if(ch =='q') break;
+
+		} while (true);
+		System.out.println("q를 입력 받아 종료합니다.");
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+
+public class Test26 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		char ch, prtch;
+
+		do {
+			prtch ='a';
+			System.out.print("k이하의 알파벳입력(q는 종료, k이상은 다시 입력) : ");
+			ch = scan.next().charAt(0);
+
+			if (ch == 'q')
+				break;
+
+			if (ch >= 'k') {
+				continue;
+			}
+			while (ch >= prtch) {
+				System.out.print(prtch++);
+
+			}
+				System.out.println();
+		} while (true);
+		System.out.println("q입력으로 종료");
+	}
+}
+
+
+
+
+
+
+import java.util.*;
+
+public class Test27 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		String str;
+		int sum = 0;
+		do {
+			System.out.print("이름 입력(quit는 종료)");
+			str = scan.nextLine();
+
+			if (str.charAt(0) == 'k' && str.charAt(1) == 'i'
+					&& str.charAt(2) == 'm') {
+				sum++;
+			}
+		} while (!str.equals("quit"));
+		System.out.println("==> kim씨는" + sum + "명");
+	}
+
+}
+

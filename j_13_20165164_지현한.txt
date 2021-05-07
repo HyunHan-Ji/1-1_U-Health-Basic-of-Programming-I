@@ -1,0 +1,127 @@
+31.상자를 나타내는 Box라는 이름의 클래스를 설계하라. Box 클래스는 상자의 높이, 너비, 
+높이를 필드로 가지고 있다. 박스가 비어 있는지 그렇지 않은지를 나타내는 empty라고 
+하는 필드도 추가한다. Box 클래스의 생성자를 중복 정의하라. 생성자는 모든 데이터를 
+받을 수도 있고 아니면 하나도 받지 않을 수 있다. 새로 생성된 Box는 비어 있다고 가정한다.
+
+
+public class Box {
+	private int height;
+	private int width;
+	private boolean empty;
+
+	Box() {
+
+	}
+
+	Box(int a, int b) {
+		this.height = a;
+		this.width = b;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public boolean getEmpty() {
+		return empty;
+	}
+
+	public void setEmpty(boolean empty) {
+		this.empty = empty;
+	}
+
+}
+
+public class BoxTest {
+
+	public static void main(String[] args) {
+		Box b1 = new Box();
+		Box b2 = new Box(1, 2);
+
+		b1.setHeight(100);
+		b1.setWidth(200);
+		System.out.println(b1.getHeight() + " " + b1.getWidth() + " " + b1.getEmpty());
+
+		b2.setHeight(1);
+		b2.setWidth(2);
+		System.out.println(b2.getHeight() + " " + b2.getWidth() + " " + b2.getEmpty());
+	}
+
+}
+
+32.영화를 나타내는 Movie라는 이름의 클래스를 설계하라. 제목, 감독, 제작사를 나타내는 
+필드를 가진다. Movie 클래스의 생성자를 중복 정의하라. 생성자는 모든 데이터를 받을 수도
+있고 아니면 하나도 받지 않을 수 있다.
+public class Movie {
+	private String title;
+	private String director;
+	private String company;
+
+	Movie() {
+
+	}
+
+	Movie(String a, String b, String c) {
+		this.title = a;
+		this.director = b;
+		this.company = c;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+
+public class MovieTest {
+
+	public static void main(String[] args) {
+		Movie mv1 = new Movie();
+		Movie mv2 = new Movie("CivilWar", "Anthony Russo", "Mavel");
+
+		mv1.setTitle("곡성");
+		mv1.setDirector("나홍진");
+		mv1.setCompany("사이드미러");
+		System.out.println(mv1.getTitle() + " " + mv1.getDirector() + " " + mv1.getCompany());
+
+		mv2.setTitle("Civil War");
+		mv2.setDirector("Anthony Russo");
+		mv2.setCompany("Mavel");
+		System.out.println(mv2.getTitle() + " " + mv2.getDirector() + " " + mv2.getCompany());
+
+	}
+
+}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+}

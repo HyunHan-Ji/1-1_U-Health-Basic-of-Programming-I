@@ -1,0 +1,211 @@
+import java.util.Scanner;
+
+public class Test10 {
+
+	public static void main(String args[]) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수를 입력하세요");
+		int num = input.nextInt();
+
+		switch (num) {
+		case 1:
+			System.out.println("one");
+			break;
+		case 2:
+			System.out.println("two");
+			break;
+		case 3:
+			System.out.println("three");
+			break;
+		case 4:
+			System.out.println("four");
+			break;
+		case 5:
+			System.out.println("five");
+			break;
+		case 6:
+			System.out.println("six");
+			break;
+		case 7:
+			System.out.println("seven");
+			break;
+		case 8:
+			System.out.println("eight");
+			break;
+		case 9:
+			System.out.println("nine");
+			break;
+		default:
+			System.out.println("other");
+			break;
+		}
+	}
+
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class Test12 {
+
+	public static void main(String args[]) {
+		
+		int order1=0, order2=0, order3=0;
+		Scanner input = new Scanner(System.in);
+		System.out.print("정수를 입력하시오");
+		int a = input.nextInt();
+		System.out.print("정수를 입력하시오");
+		int b = input.nextInt();
+		System.out.print("정수를 입력하시오");
+		int c = input.nextInt();
+
+		if(a>=b && a>=c) {
+			order1=a;
+			if(b>=c){
+				order2=b;
+				order3=c;
+			}else{
+				order2=c;
+				order3=b;
+			}
+		}else if(b>=a && b>=c) {
+			order1=b;
+			if(a>=c){
+				order2=a;
+				order3=c;
+			}else{
+				order2=c;
+				order3=a;
+			}
+		} else if(c>=b && c>=a) {
+			order1=c;
+			if(a>=b){
+				order2=a;
+				order3=b;
+			}else{
+				order2=b;
+				order3=a;
+			}
+		}else{
+		}
+		System.out.println(order3+" "+order2+" "+order1);
+	}
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class Test14 {
+
+	public static void main(String args[]) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("영문자를 입력하세요");
+		char ch = input.next().charAt(0);
+		
+		switch (ch) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+			System.out.println("모음");
+			break;
+		default: System.out.println("자음");
+		}
+	}
+
+}
+
+
+
+
+import java.util.Scanner;
+
+public class Test 15 {
+
+	public static void main(String args[]) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("키를 입력하세요");
+		double tall = input.nextDouble();
+		System.out.print("몸무게를 입력하세요");
+		double weight = input.nextDouble();
+		double stan = (tall - 100) * 0.9;
+		if (stan < weight) {
+			System.out.println("과체중입니다.");
+		} else if (stan == weight) {
+			System.out.println("표준체중입니다.");
+		} else
+			System.out.println("저체중입니다.");
+	}
+
+}
+
+
+
+
+
+
+import java.util.Scanner;
+
+public class Test18 {
+
+	public static void main(String args[]) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.print("x값을 입력하세요.");
+		double x = input.nextInt();
+		double p;
+		if (x<=0){
+			p=x*x*x-9*x+2;
+		}else{
+			p=7*x+2;
+		}
+		System.out.println(p);
+	}
+
+}
+
+
+
+import java.util.Scanner;
+
+public class Test22 {
+
+	public static void main(String args[]) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.print("연산자를 입력하세요");
+		char ch = input.next().charAt(0);
+		System.out.print("숫자를 입력하세요");
+		double x = input.nextDouble();
+		System.out.print("숫자를 입력하세요");
+		double y = input.nextDouble();
+
+		if (ch=='+'){
+			System.out.println(x+y);
+		}else if(ch=='-'){
+			System.out.println(x-y);
+		}else if(ch=='*'){
+			System.out.println(x*y);
+		}else if(ch=='/'){
+			if (y != 0) {
+				System.out.println(x / y);
+			} else {
+				System.out.println("0으로 나눌수 없습니다");
+			}
+		}
+	}
+}
+
+

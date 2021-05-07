@@ -1,0 +1,219 @@
+10번
+
+
+void init(double[] values){
+for(int i =0;i<values.length;i++){
+	values[i]=0;
+	}
+}
+
+
+
+
+
+
+public class Test13 {
+
+	public static void main(String[] args) {
+
+		double[] doo = { 1.0, 2.0, 3.0, 4.0 };
+
+		for (double value : doo) {
+			System.out.print(value + " ");
+		}
+	}
+
+}
+
+
+
+
+
+public class Test16 {
+
+	public static void main(String[] args) {
+
+		String str1[] = { "apple" };
+		String str2[] = { "banana" };
+
+		if (str1.equals(str2)) {
+			System.out.println("true");
+		} else {
+			System.out.println("false");
+		}
+
+	}
+
+}
+
+
+
+
+
+
+public class Test18 {
+
+	public static void main(String[] args) {
+
+		String a = null, b = null;
+		int c = 0;
+
+		int i = (int) (Math.random() * 4);
+
+		switch (i) {
+		case 0:
+			a = "Clubs";
+			break;
+		case 1:
+			a = "Diamonds";
+			break;
+		case 2:
+			a = "Hearts";
+			break;
+		case 3:
+			a = "Spades";
+			break;
+		}
+
+		int j = (int) (Math.random() * 13 + 1);
+
+		switch (j) {
+		case 11:
+			b = "jack";
+			break;
+		case 12:
+			b = "Quenn";
+			break;
+		case 13:
+			b = "King";
+			break;
+		case 1:
+			b = "Ace";
+			break;
+		default:
+			c = j;
+		}
+
+		if (b.equals(null)) {
+			System.out.println(a + " " + c);
+		} else {
+			System.out.println(a + " " + b);
+		}
+	}
+}
+
+
+
+
+
+import java.util.*;
+
+public class Test19 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int[] count = new int[10];
+		int[] in = new int[10];
+
+		for (int i = 0; i < 10; i++) {
+			System.out.print("숫자입력");
+			if (in[i] < 0 || in[i] > 100) {
+				System.out.println("다시입력해주세요");
+				i--;
+			} else {
+				in[i] = scan.nextInt();
+			}
+		}
+
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 10; j++) {
+				if (in[i] >= (j * 10 + 1) && in[i] <= (j * 10 + 10)) {
+					count[j]++;
+				}
+			}
+		}
+
+		for (int i = 0; i < 10; i++) {
+			System.out.println();
+			System.out.print((i * 10 + 1) + " - " + (i * 10 + 10) + ": ");
+			for (int j = 0; j < count[i]; j++) {
+				System.out.print("*");
+			}
+		}
+	}
+
+}
+
+
+
+
+import java.util.*;
+
+public class Test20 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		System.out.print("학생의 수를 입력하시오 : ");
+		int num = scan.nextInt();
+		
+		int in[] = new int[num];
+		double sum = 0;
+		
+		for (int i = 0; i < num; i++) {
+			System.out.print("학생" + (i + 1) + "의 성적을 입력하시오 : ");
+			in[i] = scan.nextInt();
+			if (in[i] < 0 || in[i] > 100) {
+				System.out.println("잘못된 성적입니다. 다시 입력하시오.");
+				i--;
+			} else {
+				sum += in[i];
+			}
+
+		}
+		System.out.println("성적 평균은 " + sum / num + "입니다.");
+	}
+
+}
+
+
+
+
+
+import java.util.*;
+
+public class Test21 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		String[] hexa2bin = { "0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010",
+				"1011", "1100", "1101", "1110", "1111" };
+
+		System.out.print("16진수 문자열을 입력하시오 : ");
+		String str = scan.nextLine();
+
+		System.out.print(str + "에 대한 이진수는 ");
+		for (int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+				System.out.print(hexa2bin[str.charAt(i) - '0'] + " ");
+
+			} else if (str.charAt(i) == 'a' || str.charAt(i) == 'A') {
+				System.out.print(hexa2bin[10] + " ");
+			} else if (str.charAt(i) == 'b' || str.charAt(i) == 'B') {
+				System.out.print(hexa2bin[11] + " ");
+			} else if (str.charAt(i) == 'c' || str.charAt(i) == 'C') {
+				System.out.print(hexa2bin[12] + " ");
+			} else if (str.charAt(i) == 'd' || str.charAt(i) == 'D') {
+				System.out.print(hexa2bin[13] + " ");
+			} else if (str.charAt(i) == 'e' || str.charAt(i) == 'E') {
+				System.out.print(hexa2bin[14] + " ");
+			} else if (str.charAt(i) == 'f' || str.charAt(i) == 'F') {
+				System.out.print(hexa2bin[15] + " ");
+			}
+		}
+		System.out.print("입니다.");
+
+	}
+
+}
